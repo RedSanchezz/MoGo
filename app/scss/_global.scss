@@ -13,3 +13,27 @@ a {
     color: inherit;
     display: block;
 }
+
+.title {
+    color: #333333;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 23px;
+}
+
+.subtitle {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.center__text-block {
+    width: 954px;
+    margin: 91px auto 0 auto;
+    text-align: center;
+}

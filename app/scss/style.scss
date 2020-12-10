@@ -1,4 +1,5 @@
 @import "global.scss";
+@import "fonts";
 .header {
     background-image: url("../img/header-bg.png");
     height: 1000px;
@@ -160,4 +161,91 @@
     font-weight: 400;
     padding-left: 5px;
     padding-top: 5px;
+}
+
+.about {
+    padding: 91px 0 0 0;
+}
+
+.about__text {}
+
+.about__images {
+    margin-top: 101px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__images-item {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        .about__images-item_hover {
+            top: -10px;
+            left: -10px;
+            opacity: 1;
+        }
+    }
+}
+
+.about__images-item_hover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.hover-item__text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hover-item__text {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about__bottom {
+    margin-top: 110px;
+    width: 100%;
+    background-color: #95e1d3;
+}
+
+.about__bottom-inner {
+    height: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__bottom-item {
+    text-align: center;
+    border-left: 1px solid rgba($color: white, $alpha: 0.3);
+    border-right: 1px solid rgba($color: white, $alpha: 0.3);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__botoom-number {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.about__botoom-text {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
