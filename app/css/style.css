@@ -85,6 +85,31 @@ img {
   .hide__text .mCSB_draggerContainer {
     display: none; }
 
+.google-map__popup {
+  overflow: hidden;
+  transition: 2s all;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.google-map__exit {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/close-icon.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  cursor: pointer; }
+
 @font-face {
   font-family: "Roboto - Light Italic";
   src: url("../fonts/Roboto-Light.ttf"); }
@@ -741,3 +766,264 @@ img {
 
 .clients__block-text {
   padding-top: 44px; }
+
+.blog {
+  padding: 112px 0 116px 0; }
+
+.blog__content {
+  margin-top: 92px;
+  display: flex;
+  justify-content: space-between; }
+
+.blog__content-item {
+  position: relative;
+  max-width: 380px;
+  width: 100%; }
+
+.blog__content-text-block {
+  height: 109px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.block__content-text-one {
+  margin-top: 20px;
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase; }
+
+.block__content-text-two {
+  margin-top: 20px;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left; }
+
+.block__content-info {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .block__content-info img {
+    display: inline-block; }
+
+.block__content-comments {
+  padding-left: 19px; }
+
+.block__content-date {
+  position: absolute;
+  padding: 15px;
+  top: 160px;
+  left: -10px;
+  width: 60px;
+  height: 70px;
+  background-color: #95e1d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.blog__content-number {
+  color: #ffffff;
+  font-family: "Roboto - Light Italic";
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700; }
+
+.blog__content-mount {
+  width: 30px;
+  height: 40px;
+  color: #ffffff;
+  font-family: "Roboto - Light Italic";
+  font-size: 15px;
+  font-weight: 400; }
+
+.map {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/map-bg.png"); }
+
+.map__center-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer; }
+
+.map__text {
+  margin-top: 18px;
+  color: #f38181;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative; }
+  .map__text::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #f38181; }
+
+.footer {
+  padding-top: 80px;
+  height: 560px; }
+
+.footer__info {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+
+.footer__subscribe {
+  max-width: 480px;
+  width: 100%; }
+
+.footer__subscribe-header {
+  color: #cccccc;
+  font-family: Montserrat;
+  font-size: 46px;
+  font-weight: 700; }
+
+.footer__subscribe-text {
+  margin-top: 42px; }
+
+.footer__subscribe-followers {
+  margin-top: 49px;
+  color: black;
+  font-family: Montserrat;
+  font-weight: 400;
+  position: relative; }
+  .footer__subscribe-followers .number {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700; }
+  .footer__subscribe-followers::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 35px;
+    left: 0;
+    background-color: #e5e5e5; }
+
+.footer__follow-us {
+  margin-top: 35px;
+  display: flex;
+  align-items: center; }
+
+.footer__follow-us-text {
+  color: #999999;
+  font-family: "Roboto - Light Italic";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding-right: 23px; }
+
+.footer__follow-us-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 220px;
+  width: 100%; }
+
+.footer__input-block {
+  margin-top: 38px;
+  display: flex; }
+  .footer__input-block input {
+    max-width: 230px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e7e7e7;
+    outline: none;
+    padding: 0 13px 0 13px; }
+  .footer__input-block button {
+    max-width: 150px;
+    width: 100%;
+    background-color: #95e1d3;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+
+.footer__blogs-header {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase; }
+
+.footer__blogs-item {
+  margin-top: 31px;
+  display: flex;
+  max-width: 335px;
+  width: 100%; }
+
+.footer__blogs-left {
+  min-width: 119px; }
+  .footer__blogs-left img {
+    width: 100%; }
+
+.footer__blogs-right {
+  padding: 20px 0 0 20px; }
+
+.footer__blog-text {
+  color: #333333;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+.footer__blog-date {
+  color: #999999;
+  font-family: "Roboto - Light Italic";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left; }
+
+.footer__instagram-header {
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase; }
+
+.footer__instagram-photos {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px; }
+
+.footer__instagram-link {
+  margin-top: 20px;
+  color: #333333;
+  font-family: "Roboto - Light Italic";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left; }
+
+.footer__bottom {
+  margin-top: 80px;
+  height: 60px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400; }
