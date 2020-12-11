@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto&display=swap");
+* {
+  box-sizing: border-box; }
+
 body {
   color: #999999;
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
   letter-spacing: normal;
-  line-height: normal;
-  box-sizing: border-box; }
+  line-height: normal; }
 
 a {
   text-decoration: none;
@@ -43,10 +45,44 @@ img {
   font-weight: 400;
   text-align: center; }
 
-.center__text-block {
+.center-text-block {
   max-width: 954px;
   margin: 91px auto 0 auto;
   text-align: center; }
+
+.mCSB_scrollTools {
+  right: 25px !important;
+  top: 20px;
+  width: 10px;
+  height: 141px; }
+
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #95e1d3;
+  transition: all 1s; }
+
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: white;
+  display: none; }
+
+.mCSB_scrollTools .mCSB_draggerContainer {
+  left: 0px;
+  width: 10px; }
+
+.hide__text {
+  height: 0px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: none !important; }
+  .hide__text #mCSB_1_scrollbar_vertical {
+    right: 25px;
+    top: 20px;
+    width: 0 !important;
+    height: 0 !important; }
+  .hide__text .mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #95e1d3;
+    height: 0; }
+  .hide__text .mCSB_draggerContainer {
+    display: none; }
 
 @font-face {
   font-family: "Roboto - Light Italic";
@@ -261,7 +297,8 @@ img {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-top: 29px; }
 
 .services {
   padding: 110px 0 122px 0; }
@@ -298,3 +335,138 @@ img {
 
 .services-item__text {
   margin-top: 18px; }
+
+.design {
+  padding-top: 110px;
+  height: 850px;
+  background-image: url("../img/design-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+
+.design__img-one {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-70%); }
+
+.design__img-two {
+  position: absolute;
+  bottom: -91px;
+  left: 50%; }
+
+.presents {
+  padding-top: 112px;
+  padding-bottom: 69px;
+  padding: 122px 0 69px 0; }
+
+.presents__skills-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 92px auto 0 auto;
+  overflow: hidden; }
+
+.skills-block__header {
+  cursor: pointer;
+  max-width: 600px;
+  height: 60px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 0 16px; }
+
+.skills-block__item:last-child .skills-block__text {
+  margin-bottom: 0; }
+
+.skills-block__header-left {
+  display: flex;
+  align-items: center; }
+
+.skills-block__header-text {
+  margin-left: 15px;
+  color: #333333;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.skills-block__text {
+  max-width: 600px;
+  height: 181px;
+  padding: 20px 50px 20px 20px;
+  border: 1px solid #e5e5e5;
+  color: #999999;
+  font-family: "Roboto - Light Italic";
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 1s;
+  margin-bottom: 10px; }
+
+.skills-block__arrow {
+  transition: all 1s;
+  transform: rotateX(180deg); }
+
+.presents__slider-block {
+  position: relative; }
+
+.presents__slider {
+  max-width: 978px;
+  margin: 190px auto 0 auto;
+  position: relative; }
+
+.presents__slider-item {
+  display: flex !important;
+  flex-direction: row;
+  max-width: 978px;
+  width: 100%; }
+
+.presents__slider-left {
+  max-width: 150px;
+  width: 100%;
+  height: 150px; }
+
+.presents__slider-right {
+  padding-left: 61px; }
+
+.presents__slider-name {
+  color: #333333;
+  font-family: "Kaushan Script";
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 69px;
+  position: relative; }
+  .presents__slider-name::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+
+.presents__slider-text {
+  color: #999999;
+  font-family: "Roboto - Light Italic";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left; }
+
+.presents__slider-left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  cursor: pointer; }
+
+.presents__slider-right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  cursor: pointer; }
