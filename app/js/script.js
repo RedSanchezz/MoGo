@@ -9,6 +9,10 @@ $(".presents__slider").slick({
     prevArrow: ".presents__slider-left-arrow",
     nextArrow: ".presents__slider-right-arrow"
 });
+$(".work__slider").slick({
+    prevArrow: ".work__slider-left-arrow",
+    nextArrow: ".work__slider-right-arrow"
+});
 let itemArr = document.querySelectorAll(".skills-block__item");
 setActive(itemArr[0]);
 
@@ -27,7 +31,7 @@ for (const item of itemArr) {
 
 function setUnActiveAll(items) {
     for (const iterator of items) {
-        iterator.querySelector(".skills-block__text").classList.add("hide__text");
+        setUnActive(iterator);
     }
 }
 
