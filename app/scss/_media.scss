@@ -1,0 +1,230 @@
+@media (max-width: 1350px) {
+    .container {
+        padding: 0 20px 0 20px;
+    }
+    .header__center-title {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 840px) {
+    .header__center-title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .header__center-subtitle {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .header__center-title::after {
+        top: 105px;
+    }
+    .header__menu {
+        display: none;
+    }
+    .header__menu-icon {
+        display: block;
+    }
+    .about__bottom {
+        background-color: white;
+    }
+    .about__bottom-inner {
+        background-color: #95e1d3;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about__bottom-item {
+        width: 80%;
+        padding: 20px;
+        justify-content: flex-start;
+        border: none;
+        border-bottom: 1px solid white;
+    }
+    .about__botoom-number {
+        font-size: 36px;
+    }
+    .presents__skills-block {
+        justify-content: center;
+    }
+    .presents__slider-left-arrow {
+        display: none;
+    }
+    .presents__slider-right-arrow {
+        display: none;
+    }
+    .presents__slider-text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .presents__slider-right {
+        flex-shrink: 5;
+        padding-left: 5px;
+    }
+    .presents__slider-left {
+        flex-shrink: 3;
+    }
+    .work__skills-block {
+        justify-content: center;
+    }
+    .work__slider-text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .work__slider-right {
+        flex-shrink: 5;
+        padding-left: 5px;
+    }
+    .work__slider-left {
+        flex-shrink: 3;
+    }
+    .blog__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog__content-item {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 760px) {
+    .skills-block__img {
+        display: none;
+    }
+    .about__botoom-number {
+        font-size: 28px;
+    }
+    .about__botoom-text {
+        padding-top: 15px;
+    }
+    .services-item {
+        width: 50%;
+    }
+    .service__block-new-line {
+        display: none;
+    }
+    .presents__slider {
+        margin-top: 50px;
+    }
+    .team {
+        padding-top: 0px;
+        padding: 0 0 20px 0;
+    }
+    .team__logos {
+        margin-top: 30px;
+    }
+    .work {
+        padding: 20px 0 30px 0;
+    }
+    .work__slider {
+        margin-top: 50px;
+    }
+    .team__block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team__block-item {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 680px) {
+    .header__center-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .header__center-subtitle {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .about__images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__images-item {
+        margin-top: 20px;
+    }
+    .design {
+        .design__img-one {
+            left: 0;
+            transform: none;
+        }
+        .design__img-two {
+            left: auto;
+            right: 0;
+            transform: none;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .presents__slider-item {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 50px;
+        position: relative;
+    }
+    .presents__slider-left {
+        margin-top: 30px;
+    }
+    .presents__slider-name {
+        position: absolute;
+        bottom: 0;
+        padding-left: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        &::after {
+            display: none;
+        }
+    }
+    .work__slider-item {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 50px;
+        position: relative;
+    }
+    .work__slider-left {
+        margin-top: 30px;
+    }
+    .work__slider-name {
+        position: absolute;
+        bottom: 0;
+        padding-left: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        &::after {
+            display: none;
+        }
+    }
+    .wrapper-block__inner {
+        img {}
+        .wrapper-block__text {
+            font-size: 5px;
+            margin-top: 0;
+        }
+        .wrapper-block__text-two {
+            font-size: 5px;
+            margin-top: 0;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .title {
+        font-size: 25px;
+    }
+    .menu-item__number {
+        display: none;
+    }
+    .menu-item__text {
+        font-family: "Montserrat - Bold";
+        font-size: 20px;
+        font-weight: 700;
+        height: 100%;
+    }
+    .services-item {
+        width: 100%;
+    }
+}
