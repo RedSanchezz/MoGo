@@ -8,6 +8,7 @@
     color: white;
     position: relative;
     padding-bottom: 28px;
+    overflow: hidden;
 }
 
 .header__menu-icon {
@@ -68,6 +69,8 @@
     max-width: 500px;
     width: 100%;
     justify-content: space-between;
+    transition: all 0.5s;
+    top: 0;
 }
 
 .header__center {
@@ -786,6 +789,10 @@
 }
 
 .work__slider-left-arrow {
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -794,6 +801,10 @@
 }
 
 .work__slider-right-arrow {
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1007,6 +1018,7 @@
 }
 
 .footer__subscribe {
+    flex-shrink: 4;
     max-width: 480px;
     width: 100%;
 }
@@ -1088,6 +1100,10 @@
     }
 }
 
+.footer__blogs {
+    flex-shrink: 0;
+}
+
 .footer__blogs-header {
     color: #333333;
     font-family: Montserrat;
@@ -1133,6 +1149,10 @@
     text-align: left;
 }
 
+.footer__instagram {
+    flex-shrink: 1;
+}
+
 .footer__instagram-header {
     color: #333333;
     font-family: Montserrat;
@@ -1155,8 +1175,6 @@
         transform: scale(1.5);
     }
 }
-
-.footer__instagram-photos {}
 
 .footer__instagram-link {
     margin-top: 20px;
@@ -1189,16 +1207,14 @@
 
 .tabs__item {
     width: 33%;
-    background-color: gray;
+    background-color: white;
     cursor: pointer;
     height: 50px;
     outline: none;
-    border-radius: 20px;
-    border: none;
+    border: 3px solid #95e1d3;
 }
 
 .tabs__active {
-    box-shadow: gray;
     background-color: #95e1d3;
 }
 

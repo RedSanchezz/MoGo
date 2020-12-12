@@ -15,17 +15,19 @@ $(".work__slider").slick({
 });
 
 {
+    let googlePopup = document.querySelector(".google-map__popup");
     let showBtn = document.querySelector(".map__center-block");
     showBtn.addEventListener("click", function() {
-        let googlePopup = document.querySelector(".google-map__popup");
         googlePopup.style.display = "flex";
         googlePopup.style.height = "100%";
         document.querySelector("body").style.overflow = "hidden";
     });
     let exitBtn = document.querySelector(".google-map__exit");
     exitBtn.addEventListener("click", function(e) {
-        let googlePopup = document.querySelector(".google-map__popup");
-        // googlePopup.style.display = "none";
+        googlePopup.style.height = "0%";
+        document.querySelector("body").style.overflow = "";
+    });
+    googlePopup.addEventListener("click", function(e) {
         googlePopup.style.height = "0%";
         document.querySelector("body").style.overflow = "";
     });
@@ -140,26 +142,55 @@ $(".work__slider").slick({
 }
 
 {
-    let mas = document.querySelectorAll("a");
+
+    let mas = document.querySelectorAll(".mobile__hover");
     let oldClick = null;
+
     for (const i of mas) {
 
         i.addEventListener("click", function(e) {
-
-            console.clear();
             console.log(oldClick);
-            if (oldClick == e.currentTarget) {
-                console.log('ok');
-                oldClick = null;
-                return e;
-
-            } else {
-                oldClick = e.currentTarget;
+            console.log(e.currentTarget);
+            if (innerWidth < 760) {
+                if (oldClick == e.currentTarget) {
+                    console.log('ok');
+                    oldClick = null;
+                    return;
+                } else {
+                    oldClick = e.currentTarget;
+                }
+                e.preventDefault();
             }
-            e.preventDefault();
         }, true);
-
 
     }
 
+}
+
+{
+
+    let menuIcon = document.querySelector(".header__menu-icon");
+    let menuBlock = document.querySelector(".header__menu");
+    menuIcon.addEventListener("click", function(e) {
+        if (menuBlock.classList.contains("menu__active")) {
+            menuBlock.classList.remove("menu__active");
+            menuIcon.classList.add("animate__flip");
+            setTimeout(() => {
+                menuIcon.classList.remove("animate__flip");
+                menuIcon.style.backgroundImage = "url('../img/header-menu-icon.png')";
+
+            }, 500);
+
+        } else {
+            menuBlock.classList.add("menu__active");
+            menuIcon.classList.add("animate__fadeOut");
+
+            setTimeout(() => {
+                menuIcon.classList.remove("animate__fadeOut");
+                menuIcon.style.backgroundImage = "url('../img/close-icon.png')";
+                menuIcon.classList.add("animate__fadeIn");
+
+            }, 500);
+        }
+    })
 }
