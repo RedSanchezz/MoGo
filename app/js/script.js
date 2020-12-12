@@ -84,13 +84,11 @@ $(".work__slider").slick({
 
     function handleTabletChange(e) {
         if (e.matches) {
-            console.log('Media Query Matched!');
             setUnActiveAll();
             document.querySelector(".footer__tabs").style.display = "flex";
             setActive(mogo, btnMogo);
 
         } else {
-            console.log('none');
             mogo.classList.remove("footer__unactive");
             blog.classList.remove("footer__unactive");
             instagram.classList.remove("footer__unactive");
@@ -139,4 +137,29 @@ $(".work__slider").slick({
         btnBlog.classList.remove("tabs__active");
         btnInst.classList.remove("tabs__active");
     }
+}
+
+{
+    let mas = document.querySelectorAll("a");
+    let oldClick = null;
+    for (const i of mas) {
+
+        i.addEventListener("click", function(e) {
+
+            console.clear();
+            console.log(oldClick);
+            if (oldClick == e.currentTarget) {
+                console.log('ok');
+                oldClick = null;
+                return e;
+
+            } else {
+                oldClick = e.currentTarget;
+            }
+            e.preventDefault();
+        }, true);
+
+
+    }
+
 }
