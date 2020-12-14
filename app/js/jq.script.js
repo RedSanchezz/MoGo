@@ -147,28 +147,30 @@ $(function() {
             let target = e.currentTarget;
             console.log(oldClick);
             console.log("NEW");
-            if (oldClick == target) {
+            if (innerWidth < 769) {
+                if (oldClick == target) {
 
-                oldClick = null;
-                console.log("click");
-                return true;
+                    oldClick = null;
+                    console.log("click");
+                    return true;
 
-            } else {
-                console.log("unclicked");
-                oldClick = target;
-                let test = $(this);
-                let int = setInterval(function() {
-                    if (!test.is(":hover")) {
-                        oldClick = null;
-                        clearInterval(int);
-                        console.log("cleared");
-                    } else {
-                        oldClick = target;
-                    }
-                }, 10);
+                } else {
+                    console.log("unclicked");
+                    oldClick = target;
+                    let test = $(this);
+                    let int = setInterval(function() {
+                        if (!test.is(":hover")) {
+                            oldClick = null;
+                            clearInterval(int);
+                            console.log("cleared");
+                        } else {
+                            oldClick = target;
+                        }
+                    }, 10);
 
+                }
+                e.preventDefault();
             }
-            e.preventDefault();
         });
 
     }

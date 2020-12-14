@@ -137,6 +137,9 @@
     margin-top: 105px;
     display: flex;
     justify-content: space-between;
+    a {
+        width: 100%;
+    }
 }
 
 .header__bottom-menu-item {
@@ -1021,6 +1024,8 @@
     flex-shrink: 4;
     max-width: 480px;
     width: 100%;
+    margin-right: 20px;
+    min-width: 240px;
 }
 
 .footer__subscribe-header {
