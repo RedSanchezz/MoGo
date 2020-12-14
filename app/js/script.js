@@ -1,78 +1,42 @@
-$(".skills-block__text").mCustomScrollbar({
-    theme: "my-theme",
-    autoDraggerLength: true,
-    scrollbarPosition: "outside"
+// {
+//     let itemArr = document.querySelectorAll(".skills-block__item");
+//     setActive(itemArr[0]);
 
-});
+//     for (const item of itemArr) {
+//         let block = item.querySelector(".skills-block__text");
+//         let header = item.querySelector(".skills-block__header");
+//         header.addEventListener("click", function(e) {
+//             if (block.classList.contains("hide__text")) {
+//                 setUnActiveAll(itemArr);
+//                 setActive(item);
+//             } else {
+//                 setUnActive(item);
+//             }
+//         })
+//     }
 
-$(".presents__slider").slick({
-    prevArrow: ".presents__slider-left-arrow",
-    nextArrow: ".presents__slider-right-arrow"
-});
-$(".work__slider").slick({
-    prevArrow: ".work__slider-left-arrow",
-    nextArrow: ".work__slider-right-arrow"
-});
+//     function setUnActiveAll(items) {
+//         for (const iterator of items) {
+//             setUnActive(iterator);
+//         }
+//     }
 
-{
-    let googlePopup = document.querySelector(".google-map__popup");
-    let showBtn = document.querySelector(".map__center-block");
-    showBtn.addEventListener("click", function() {
-        googlePopup.style.display = "flex";
-        googlePopup.style.height = "100%";
-        document.querySelector("body").style.overflow = "hidden";
-    });
-    let exitBtn = document.querySelector(".google-map__exit");
-    exitBtn.addEventListener("click", function(e) {
-        googlePopup.style.height = "0%";
-        document.querySelector("body").style.overflow = "";
-    });
-    googlePopup.addEventListener("click", function(e) {
-        googlePopup.style.height = "0%";
-        document.querySelector("body").style.overflow = "";
-    });
+//     function setActive(item) {
+//         let header = item.querySelector(".skills-block__header");
+//         let block = item.querySelector(".skills-block__text");
+//         let arrow = item.querySelector(".skills-block__arrow");
+//         block.classList.remove("hide__text");
+//         arrow.style.transform = "rotateX(0deg)";
+//     }
 
-}
-
-{
-    let itemArr = document.querySelectorAll(".skills-block__item");
-    setActive(itemArr[0]);
-
-    for (const item of itemArr) {
-        let block = item.querySelector(".skills-block__text");
-        let header = item.querySelector(".skills-block__header");
-        header.addEventListener("click", function(e) {
-            if (block.classList.contains("hide__text")) {
-                setUnActiveAll(itemArr);
-                setActive(item);
-            } else {
-                setUnActive(item);
-            }
-        })
-    }
-
-    function setUnActiveAll(items) {
-        for (const iterator of items) {
-            setUnActive(iterator);
-        }
-    }
-
-    function setActive(item) {
-        let header = item.querySelector(".skills-block__header");
-        let block = item.querySelector(".skills-block__text");
-        let arrow = item.querySelector(".skills-block__arrow");
-        block.classList.remove("hide__text");
-        arrow.style.transform = "rotateX(0deg)";
-    }
-
-    function setUnActive(item) {
-        let header = item.querySelector(".skills-block__header");
-        let block = item.querySelector(".skills-block__text");
-        let arrow = item.querySelector(".skills-block__arrow");
-        block.classList.add("hide__text");
-        arrow.style.transform = "rotateX(180deg)";
-    }
-}
+//     function setUnActive(item) {
+//         let header = item.querySelector(".skills-block__header");
+//         let block = item.querySelector(".skills-block__text");
+//         let arrow = item.querySelector(".skills-block__arrow");
+//         block.classList.add("hide__text");
+//         arrow.style.transform = "rotateX(180deg)";
+//     }
+// }
 
 {
     let mogo = document.querySelector(".footer__subscribe");
@@ -147,17 +111,25 @@ $(".work__slider").slick({
     let oldClick = null;
 
     for (const i of mas) {
-
         i.addEventListener("click", function(e) {
+            let target = e.currentTarget;
             console.log(oldClick);
-            console.log(e.currentTarget);
+            console.log(target);
             if (innerWidth < 760) {
-                if (oldClick == e.currentTarget) {
+                if (oldClick == target) {
                     console.log('ok');
                     oldClick = null;
                     return;
                 } else {
-                    oldClick = e.currentTarget;
+                    console.log(target);
+                    oldClick = target;
+                    console.log("add event listener to");
+                    console.log(target);
+                    target.addEventListener("mouseout", function(e) {
+                        console.log(e.target);
+                        // oldClick = null;
+                    });
+
                 }
                 e.preventDefault();
             }
@@ -168,7 +140,6 @@ $(".work__slider").slick({
 }
 
 {
-
     let menuIcon = document.querySelector(".header__menu-icon");
     let menuBlock = document.querySelector(".header__menu");
     menuIcon.addEventListener("click", function(e) {
