@@ -41,10 +41,16 @@ gulp.task("bs", function() {
 });
 
 gulp.task("lib", function() {
-    gulp.src(["./node_modules/jquery/dist/jquery.min.js", "./node_modules/slick-carousel/slick/slick.min.js"])
+    gulp.src(["./node_modules/jquery/dist/jquery.min.js",
+            "./node_modules/slick-carousel/slick/slick.min.js",
+            "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"
+        ])
         .pipe(concat("lib.js"))
         .pipe(gulp.dest("./app/js/libs"));
-    gulp.src(["./node_modules/slick-carousel/slick/slick.css", "./node_modules/normalize.css/normalize.css"])
+    gulp.src(["./node_modules/slick-carousel/slick/slick.css",
+            "./node_modules/normalize.css/normalize.css",
+            "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"
+        ])
         .pipe(concat("libs.css"))
         .pipe(gulp.dest("./app/css/libs"));
 });

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #999999;
     font-family: Roboto;
@@ -5,7 +9,6 @@ body {
     font-style: normal;
     letter-spacing: normal;
     line-height: normal;
-    box-sizing: border-box;
 }
 
 a {
@@ -13,3 +16,122 @@ a {
     color: inherit;
     display: block;
 }
+
+img {
+    object-fit: scale-down;
+    max-width: 100%;
+    display: block;
+}
+
+.title {
+    color: #333333;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 23px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #f38181;
+    }
+}
+
+.subtitle {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.center-text-block {
+    max-width: 954px;
+    margin: 91px auto 0 auto;
+    text-align: center;
+}
+
+.mCSB_scrollTools {
+    right: 25px!important;
+    top: 20px;
+    width: 10px;
+    height: 141px;
+}
+
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #95e1d3;
+    transition: all 1s;
+}
+
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: white;
+    display: none;
+}
+
+.mCSB_scrollTools .mCSB_draggerContainer {
+    left: 0px;
+    width: 10px;
+}
+
+.hide__text {
+    height: 0px!important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    border: none!important;
+    #mCSB_1_scrollbar_vertical {
+        right: 25px;
+        top: 20px;
+        width: 0!important;
+        height: 0!important;
+        // display: none!important;
+    }
+    .mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        background-color: #95e1d3;
+        height: 0;
+    }
+    .mCSB_draggerContainer {
+        display: none;
+    }
+}
+
+.google-map__popup {
+    overflow: hidden;
+    transition: 1s all;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-map__exit {
+    height: 50px;
+    width: 50px;
+    background-image: url('../img/close-icon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.footer__unactive {
+    display: none!important;
+}
+
+// .mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
+//     background-color: rgba($color: #000000, $alpha: 0);
+// }
