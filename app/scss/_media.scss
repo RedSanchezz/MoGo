@@ -29,20 +29,20 @@
         display: flex;
         position: absolute;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         right: -1000px;
-        background-color: rgba($color: gray, $alpha: 0.7);
+        background-color: rgba($color: #E78182, $alpha: 1.0);
         width: 100%;
-        max-width: 1000px;
-        height: 100%;
+        max-width: 340px;
+        // height: 100%;
         z-index: 999;
         .header__menu-item {
             display: block;
             width: 300px;
             height: 50px;
-            margin-bottom: 20px;
-            background-color: gray;
+            margin-bottom: 10px;
+            background-color: rgb(187, 77, 77);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,7 +51,17 @@
             }
         }
         .header__icons-item {
-            display: none;
+            // display: none;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: -49px;
+        }
+        .header__shop-icon {
+            right: 145px;
+        }
+        .header__search-icon {
+            right: 85px;
         }
     }
     .menu__active {
@@ -90,11 +100,7 @@
         line-height: 20px;
     }
     .presents__slider-right {
-        flex-shrink: 5;
         padding-left: 5px;
-    }
-    .presents__slider-left {
-        flex-shrink: 3;
     }
     .work__skills-block {
         justify-content: center;
@@ -104,11 +110,11 @@
         line-height: 20px;
     }
     .work__slider-right {
-        flex-shrink: 5;
         padding-left: 5px;
     }
     .work__slider-left {
-        flex-shrink: 3;
+        display: flex;
+        justify-content: center;
     }
     .blog__content {
         flex-direction: column;
@@ -209,10 +215,11 @@
         align-items: center;
         padding-bottom: 50px;
         position: relative;
-        padding: 0;
     }
     .presents__slider-left {
-        margin-top: 30px;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
     }
     .presents__slider-name {
         position: absolute;

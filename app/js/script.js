@@ -32,29 +32,29 @@
 
 // }
 
-{
-    let menuIcon = document.querySelector(".header__menu-icon");
-    let menuBlock = document.querySelector(".header__menu");
-    menuIcon.addEventListener("click", function(e) {
-        if (menuBlock.classList.contains("menu__active")) {
-            menuBlock.classList.remove("menu__active");
-            menuIcon.classList.add("animate__flip");
-            setTimeout(() => {
-                menuIcon.classList.remove("animate__flip");
-                menuIcon.style.backgroundImage = "url('../img/header-menu-icon.png')";
+// {
+//     let menuIcon = document.querySelector(".header__menu-icon");
+//     let menuBlock = document.querySelector(".header__menu");
+//     menuIcon.addEventListener("click", function(e) {
+//         if (menuBlock.classList.contains("menu__active")) {
+//             menuBlock.classList.remove("menu__active");
+//             menuIcon.classList.add("animate__flip");
+//             setTimeout(() => {
+//                 menuIcon.classList.remove("animate__flip");
+//                 menuIcon.style.backgroundImage = "url('../img/header-menu-icon.png')";
 
-            }, 500);
+//             }, 500);
 
-        } else {
-            menuBlock.classList.add("menu__active");
-            menuIcon.classList.add("animate__fadeOut");
+//         } else {
+//             menuBlock.classList.add("menu__active");
+//             menuIcon.classList.add("animate__fadeOut");
 
-            setTimeout(() => {
-                menuIcon.classList.remove("animate__fadeOut");
-                menuIcon.style.backgroundImage = "url('../img/close-icon.png')";
-                menuIcon.classList.add("animate__fadeIn");
+//             setTimeout(() => {
+//                 menuIcon.classList.remove("animate__fadeOut");
+//                 menuIcon.style.backgroundImage = "url('../img/close-icon.png')";
+//                 menuIcon.classList.add("animate__fadeIn");
 
-            }, 500);
-        }
-    })
-}
+//             }, 500);
+//         }
+//     })
+// }

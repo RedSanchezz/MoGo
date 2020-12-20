@@ -19,6 +19,7 @@
     background-image: url('../img/header-menu-icon.png');
     background-size: cover;
     background-repeat: no-repeat;
+    animation-duration: 500ms!important;
 }
 
 .header__top {
@@ -48,6 +49,11 @@
     }
 }
 
+.header__icons-item:hover {
+    fill: #fce38a;
+    transition: all 0.7s;
+}
+
 .header__menu-item:hover {
     color: #fce38a;
     &::after {
@@ -75,7 +81,7 @@
 
 .header__center {
     margin: 164px auto 0 auto;
-    max-width: 802px;
+    max-width: 880px;
     width: 100%;
 }
 
@@ -123,17 +129,15 @@
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase;
     position: relative;
+    transition: all 0.5s;
     &:hover {
         border: 3px solid #f38181;
-        transition: all 0.5s;
     }
 }
 
 .header__bottom-menu {
-    width: 100%;
     margin-top: 105px;
     display: flex;
     justify-content: space-between;
@@ -171,7 +175,6 @@
     font-family: "Montserrat - Bold";
     font-size: 24px;
     font-weight: 700;
-    height: 100%;
 }
 
 .menu-item__text {
@@ -179,9 +182,7 @@
     opacity: 0.7;
     font-size: 18px;
     font-weight: 400;
-    font-weight: 400;
-    padding-left: 5px;
-    padding-top: 5px;
+    padding: 5px 0 0 5px;
 }
 
 .about {
@@ -278,17 +279,15 @@
 }
 
 .about__bottom-inner {
-    height: 270px;
+    min-height: 270px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .about__bottom-item {
     text-align: center;
     border-left: 1px solid rgba($color: white, $alpha: 0.3);
     border-right: 1px solid rgba($color: white, $alpha: 0.3);
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -469,7 +468,7 @@
 }
 
 .presents__slider-left {
-    max-width: 150px;
+    min-width: 150px;
     width: 100%;
     height: 150px;
 }
@@ -483,7 +482,6 @@
     font-family: "Kaushan Script";
     font-size: 24px;
     font-weight: 400;
-    text-align: left;
     padding-left: 69px;
     position: relative;
     &::after {
@@ -505,6 +503,8 @@
     font-weight: 400;
     line-height: 36px;
     text-align: left;
+    overflow: auto;
+    max-height: 180px;
 }
 
 .presents__slider-left-arrow {
@@ -753,7 +753,7 @@
 }
 
 .work__slider-left {
-    max-width: 150px;
+    min-width: 150px;
     width: 100%;
     height: 150px;
 }
@@ -789,6 +789,8 @@
     font-weight: 400;
     line-height: 36px;
     text-align: left;
+    max-height: 180px;
+    overflow: auto;
 }
 
 .work__slider-left-arrow {
@@ -828,7 +830,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .clients__block-item {
@@ -903,7 +905,8 @@
 }
 
 .blog__content-text-block {
-    height: 109px;
+    min-height: 109px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -979,6 +982,8 @@
     justify-content: center;
     align-items: center;
     background-image: url('../img/map-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .map__center-block {
@@ -1129,6 +1134,10 @@
     min-width: 119px;
     img {
         width: 100%;
+        transition: all 0.7s;
+    }
+    img:hover {
+        transform: scale(1.5);
     }
 }
 

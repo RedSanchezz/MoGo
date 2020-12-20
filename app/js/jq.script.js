@@ -40,25 +40,26 @@ $(function() {
     {
         let itemArr = $(".skills-block__item");
         setActive(itemArr.eq(0));
-        setTimeout(function() {
-            setUnActiveAll(itemArr);
-        }, 1000);
 
 
-        // console.log(itemArr);
-        itemArr.on("click", function() {
-            let target = $(this);
-            if (!$(".skills-block__text", target).is(".hide__text")) {
-                setUnActive(this);
-                return;
-            }
-            setUnActiveAll(itemArr);
-            setActive(this);
+        // for (const it of itemArr) {
+        //     let block = $(".skills-block__header", it);
+        //     block.on();
+        // }
+        itemArr.each(function(index, it) {
+            console.log(it);
+            let block = $(".skills-block__header", it);
+            block.on("click", function(e) {
 
+                if (!$(".skills-block__text", it).is(".hide__text")) {
+                    setUnActive(it);
+                    return;
+                }
+                setUnActiveAll(itemArr);
+                setActive(it);
 
-
+            });
         });
-
 
         function setUnActiveAll(items) {
             items.each(function(index, item) {
@@ -69,6 +70,10 @@ $(function() {
         function setActive(item) {
             let block = $(".skills-block__text", item);
             let arrow = $(".skills-block__arrow", item);
+            let bar = $(".mCSB_dragger_bar", item);
+            setTimeout((e) => {
+                bar.css("opacity", "1");
+            }, 600);
             block.removeClass("hide__text")
             arrow.css("transform", "rotateX(0deg)");
         }
@@ -76,6 +81,9 @@ $(function() {
         function setUnActive(item) {
             let block = $(".skills-block__text", item);
             let arrow = $(".skills-block__arrow", item);
+            let bar = $(".mCSB_dragger_bar", item);
+
+            bar.css("opacity", "0");
             block.addClass("hide__text");
             arrow.css("transform", "rotateX(180deg)");
         }
@@ -105,7 +113,7 @@ $(function() {
 
             }
         }
-        mediaQuery.addListener(handleTabletChange);
+        mediaQuery.addEventListener("change", handleTabletChange);
         handleTabletChange(mediaQuery);
 
         btnMogo.on("click", function() {
@@ -170,6 +178,40 @@ $(function() {
 
                 }
                 e.preventDefault();
+            }
+        });
+
+    }
+    //header-icon
+    {
+        let menuIcon = $(".header__menu-icon");
+        let menuBlock = $(".header__menu");
+
+        menuIcon.on("click", (e) => {
+
+            if (menuBlock.hasClass("menu__active")) {
+                menuBlock.removeClass("menu__active");
+
+                menuIcon.addClass("animate__fadeOutRight");
+                setTimeout(() => {
+                    menuIcon.removeClass("animate__fadeOutRight");
+                    menuIcon.css("backgroundImage", "url('../img/header-menu-icon.png')");
+                    menuIcon.addClass("animate__fadeInLeft");
+                    setTimeout(() => {
+                        menuIcon.removeClass("animate__fadeInLeft");
+                    }, 500);
+                }, 500);
+            } else {
+                menuBlock.addClass("menu__active");
+                menuIcon.addClass("animate__fadeOutRight");
+                setTimeout(() => {
+                    menuIcon.css("backgroundImage", "url('../img/close-icon.png')");
+                    menuIcon.removeClass("animate__fadeOutRight");
+                    menuIcon.addClass("animate__fadeInLeft");
+                    setTimeout(() => {
+                        menuIcon.removeClass("animate__fadeInLeft");
+                    }, 500);
+                }, 500);
             }
         });
 

@@ -113,6 +113,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .google-map__exit {
@@ -130,6 +131,11 @@ img {
 
 .footer__unactive {
     display: none!important;
+}
+
+.big-container {
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 // .mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
