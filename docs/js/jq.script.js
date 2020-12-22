@@ -47,7 +47,6 @@ $(function() {
         //     block.on();
         // }
         itemArr.each(function(index, it) {
-            console.log(it);
             let block = $(".skills-block__header", it);
             block.on("click", function(e) {
 
@@ -153,24 +152,19 @@ $(function() {
         let oldClick = null;
         mas.on("click", function(e) {
             let target = e.currentTarget;
-            console.log(oldClick);
-            console.log("NEW");
             if (innerWidth < 769) {
                 if (oldClick == target) {
 
                     oldClick = null;
-                    console.log("click");
                     return true;
 
                 } else {
-                    console.log("unclicked");
                     oldClick = target;
                     let test = $(this);
                     let int = setInterval(function() {
                         if (!test.is(":hover")) {
                             oldClick = null;
                             clearInterval(int);
-                            console.log("cleared");
                         } else {
                             oldClick = target;
                         }

@@ -60,5 +60,6 @@ gulp.task("dest", function() {
     gulp.src("./app/*.html").pipe(gulp.dest("./docs/"));
     gulp.src("./app/js/**").pipe(gulp.dest("./docs/js"));
     gulp.src("./app/img/**").pipe(gulp.dest("./docs/img"));
+    gulp.src("./app/fonts/**").pipe(gulp.dest("./docs/fonts"));
 });
 gulp.task("default", gulp.parallel('bs', 'scss', 'watch'));
