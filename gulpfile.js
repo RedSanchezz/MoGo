@@ -54,4 +54,11 @@ gulp.task("lib", function() {
         .pipe(concat("libs.css"))
         .pipe(gulp.dest("./app/css/libs"));
 });
+
+gulp.task("dest", function() {
+    gulp.src("./app/css/**").pipe(gulp.dest("./docs/css"));
+    gulp.src("./app/*.html").pipe(gulp.dest("./docs/"));
+    gulp.src("./app/js/**").pipe(gulp.dest("./docs/js"));
+    gulp.src("./app/img/**").pipe(gulp.dest("./docs/img"));
+});
 gulp.task("default", gulp.parallel('bs', 'scss', 'watch'));
