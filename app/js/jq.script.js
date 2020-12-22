@@ -195,7 +195,7 @@ $(function() {
                 menuIcon.addClass("animate__fadeOutRight");
                 setTimeout(() => {
                     menuIcon.removeClass("animate__fadeOutRight");
-                    menuIcon.css("background-image", "url('../img/header-menu-icon.png')");
+                   //menuIcon.css("background-image", "url('../img/header-menu-icon.png')");
                     menuIcon.addClass("animate__fadeInLeft");
                     setTimeout(() => {
                         menuIcon.removeClass("animate__fadeInLeft");
@@ -205,7 +205,7 @@ $(function() {
                 menuBlock.addClass("menu__active");
                 menuIcon.addClass("animate__fadeOutRight");
                 setTimeout(() => {
-                    menuIcon.css("background-image", "url('../img/close-icon.png')");
+                  //menuIcon.css("background-image", "url('../img/close-icon.png')");
                     menuIcon.removeClass("animate__fadeOutRight");
                     menuIcon.addClass("animate__fadeInLeft");
                     setTimeout(() => {
